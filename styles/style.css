@@ -23,7 +23,7 @@ nav {
     list-style-type: circle;
 }
 
-.no-marker{
+.no-marker {
     list-style: none;
 
 }
@@ -129,7 +129,6 @@ nav {
     text-transform: uppercase;
     margin: 10px 0;
     word-spacing: 20px;
-    line-height: 28px;
 }
 
 .cta-button {
