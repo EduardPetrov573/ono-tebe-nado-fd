@@ -1,1 +1,346 @@
-/* место для вашего кода */
+header {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    align-items: center;
+    padding: 92px 50px;
+    min-height: 293px;
+    gap: 20px;
+}
+
+nav {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+
+.nav-item {
+    position: relative;
+    list-style-type: circle;
+}
+
+.no-marker{
+    list-style: none;
+
+}
+
+.logo img {
+    width: 148px;
+    height: 105px;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    justify-self: end;
+    margin-right: -40px;
+}
+
+.address a {
+    color: black; /* Цвет ссылки */
+}
+
+.cover {
+    position: relative;
+    background-image: url(/images/cover.jpg);
+    background-size: cover;
+    color: white;
+    padding: 0 50px 50px;
+    text-align: center;
+    margin: 0 0 180px;
+    min-height: 757px;
+}
+
+.cover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.cover h1,
+.cover .description {
+    position: relative;
+    z-index: 2;
+}
+
+.cover h1 {
+    top: 165px;
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 42px;
+    letter-spacing: 26px;
+    height: 385px;
+}
+
+.word {
+    display: block;
+}
+
+.word.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: left;
+}
+
+.word.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.word.bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    bottom: -260px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    gap: 90px;
+}
+
+.subheading {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    color: white;
+    text-transform: uppercase;
+    margin: 10px 0;
+    word-spacing: 20px;
+    line-height: 28px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0;
+    width: 256px;
+    height: 51px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.lots {
+    margin: 180px auto 120px;
+    min-height: 723px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lots h2 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #333;
+    margin-left: -850px;
+}
+
+.lot-list {
+    margin-top: 24px;
+    display: flex;
+    gap: 25px;
+}
+
+.product {
+    position: relative;
+    min-height: 596px;
+    width: 334px;
+    padding: 40px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background-size: cover;
+    background-position: center;
+}
+
+.lot1 {
+    background-image: url(/images/card-lot-01.jpg);
+}
+
+.lot2 {
+    background-image: url(/images/card-lot-02.jpg);
+}
+
+.lot3 {
+    background-image: url(/images/card-lot-03.jpg);
+}
+
+.product::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.product h1, .product h3 {
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: white;
+    line-height: 120%;
+}
+
+.product p {
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    line-height: 120%;
+}
+
+.view-more {
+    margin-top: 20px;
+    align-self: flex-start;
+    margin-left: 35px;
+    
+}
+
+.view-more a {
+    font-weight: 400;
+    font-size: 20px;
+    color: #333;
+    margin-left: 30px
+}
+
+.about-auction {
+    margin: 120px auto 180px;
+    width: 1052px;
+    min-height: 595px;
+}
+
+.column-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 72px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 240px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 35px 0 0 47px;
+}
+
+.circle img {
+    width: 148px;
+    height: 114px;
+}
+
+.right-column h3 {
+    margin: 3px 0 100px;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+footer {
+    margin-top: 180px;
+    min-height: 180px;
+    padding: 0 50px 0 50px;;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: start;
+    margin: 0 auto;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.contact-info {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24.3px;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.social-links {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    margin-left: 48px;
+}
+
+.social-links li img {
+    width: 48px;
+    height: 48px;
+}
