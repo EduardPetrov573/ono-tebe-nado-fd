@@ -2,8 +2,7 @@ header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    padding: 92px 50px;
-    min-height: 293px;
+    padding: 92px 50px ;
     gap: 20px;
 }
 
@@ -18,14 +17,15 @@ nav {
     gap: 30px;
 }
 
-.nav-item {
+.header__link {
     position: relative;
     list-style-type: circle;
+    text-decoration: underline;
 }
 
-.no-marker {
+.header__link_active {
     list-style: none;
-
+    text-decoration: none;
 }
 
 .logo img {
@@ -37,26 +37,19 @@ nav {
     display: flex;
     flex-direction: column;
     max-width: 300px;
-    justify-self: end;
-    margin-right: -40px;
+    line-height: 24.3px;
+    font-size: 18px;   
+}
+.header_address{
+    margin-left: 184px;
+    font-style: normal;
 }
 
 .address a {
-    color: black; /* Цвет ссылки */
+    color: black; 
 }
 
-.cover {
-    position: relative;
-    background-image: url(/images/cover.jpg);
-    background-size: cover;
-    color: white;
-    padding: 0 50px 50px;
-    text-align: center;
-    margin: 0 0 180px;
-    min-height: 757px;
-}
-
-.cover::after {
+.overlay {
     content: "";
     position: absolute;
     top: 0;
@@ -67,20 +60,30 @@ nav {
     z-index: 1;
 }
 
-.cover h1,
+.cover {
+    position: relative;
+    background-image: url(../images/cover.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 165px 50px 50px 50px;
+    text-align: center;
+    margin: 0 0 180px;
+    min-height: 757px;
+}
+
+.cover_title,
 .cover .description {
     position: relative;
     z-index: 2;
 }
 
-.cover h1 {
-    top: 165px;
+.cover_title {
     text-transform: uppercase;
     font-size: 100px;
     font-weight: bold;
-    line-height: 42px;
-    letter-spacing: 26px;
-    height: 385px;
+    line-height: 130px;
+    letter-spacing: 30px;
 }
 
 .word {
@@ -88,37 +91,29 @@ nav {
 }
 
 .word.top {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     text-align: left;
 }
 
 .word.middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     text-align: center;
 }
 
 .word.bottom {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    position: relative;
     text-align: right;
+    margin-right: -20px;
 }
 
 .description {
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: absolute;
-    bottom: -260px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     width: 100%;
     gap: 90px;
+    margin-top: 100px;
 }
 
 .subheading {
@@ -127,15 +122,14 @@ nav {
     line-height: 28px;
     color: white;
     text-transform: uppercase;
-    margin: 10px 0;
     word-spacing: 20px;
 }
 
-.cta-button {
+.button {
     display: inline-block;
-    padding: 0;
+    margin-right: 0;
     width: 256px;
-    height: 51px;
+    min-height: 51px;
     border: 1px solid white;
     background-color: transparent;
     color: white;
@@ -147,23 +141,26 @@ nav {
     transition: background-color 0.3s;
 }
 
-.cta-button:hover {
+.button:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 .lots {
     margin: 180px auto 120px;
-    min-height: 723px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
+    width: 1052px;
 }
 
-.lots h2 {
+.lots h1 {
+    line-height: 100%;
     font-weight: 700;
     font-size: 40px;
-    color: #333;
-    margin-left: -850px;
+    color: black;
+    align-self: flex-start;
+    margin-left: 40px;
 }
 
 .lot-list {
@@ -176,34 +173,22 @@ nav {
     position: relative;
     min-height: 596px;
     width: 334px;
-    padding: 40px;
+    padding: 48px 40px;
     overflow: hidden;
-    transition: transform 0.3s;
     background-size: cover;
     background-position: center;
 }
 
-.lot1 {
-    background-image: url(/images/card-lot-01.jpg);
+.lot_type_film {
+    background-image: url(../images/card-lot-01.jpg);
 }
 
-.lot2 {
-    background-image: url(/images/card-lot-02.jpg);
+.lot_type_book {
+    background-image: url(../images/card-lot-02.jpg);
 }
 
-.lot3 {
-    background-image: url(/images/card-lot-03.jpg);
-}
-
-.product::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
+.lot_type_picture {
+    background-image: url(../images/card-lot-03.jpg);
 }
 
 .text-container {
@@ -215,7 +200,7 @@ nav {
     z-index: 2;
 }
 
-.product h1, .product h3 {
+.product h2 {
     font-weight: 700;
     font-size: 22px;
     text-transform: uppercase;
@@ -232,23 +217,21 @@ nav {
 }
 
 .view-more {
-    margin-top: 20px;
+    margin-top: 30px;
     align-self: flex-start;
-    margin-left: 35px;
+    margin-left: 40px;
     
 }
 
 .view-more a {
     font-weight: 400;
     font-size: 20px;
-    color: #333;
-    margin-left: 30px
+    color: black;
 }
 
 .about-auction {
     margin: 120px auto 180px;
     width: 1052px;
-    min-height: 595px;
 }
 
 .column-container {
@@ -257,7 +240,7 @@ nav {
     gap: 72px;
 }
 
-.left-column {
+.black_logo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -279,14 +262,14 @@ nav {
     height: 114px;
 }
 
-.right-column h3 {
-    margin: 3px 0 100px;
+.about_text h3 {
+    margin: 133px 0 100px;
     font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
 }
 
-.faq {
+.information {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -297,8 +280,7 @@ nav {
 
 footer {
     margin-top: 180px;
-    min-height: 180px;
-    padding: 0 50px 0 50px;;
+    padding: 0 50px 0 50px;
 }
 
 .footer-container {
@@ -308,24 +290,36 @@ footer {
     margin: 0 auto;
 }
 
-.footer-left {
+.footer-address {
     text-align: left;
-}
-
-.contact-info {
     font-weight: 400;
     font-size: 18px;
     line-height: 24.3px;
+    margin-left: 0px;
+    letter-spacing: 0%;
 }
 
-.footer-center {
-    text-align: center;
+.footer-menu {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    margin-left: 200px;
 }
 
-.footer-right {
+.footer__link{
+    position: relative;
+    list-style: none; 
+    text-decoration: underline;
+}
+
+.footer__link_active{
+    text-decoration: none;
+}
+
+.footer-social-links {
     display: flex;
     justify-content: flex-end;
-
 }
 
 .social-links {
