@@ -40,7 +40,7 @@ nav {
     line-height: 24.3px;
     font-size: 18px;   
 }
-.header_address{
+.header_address {
     margin-left: 184px;
     font-style: normal;
 }
@@ -307,13 +307,13 @@ footer {
     margin-left: 200px;
 }
 
-.footer__link{
+.footer__link {
     position: relative;
     list-style: none; 
     text-decoration: underline;
 }
 
-.footer__link_active{
+.footer__link_active {
     text-decoration: none;
 }
 
